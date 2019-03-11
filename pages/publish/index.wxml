@@ -1,0 +1,84 @@
+<!--pages/publish/index.wxml-->
+<view class="container">
+  <view class="navGation">
+    <view class="xw-bt same-bt on">寻物</view>
+    <view class="xz-bt same-bt">寻主</view>
+  </view>
+  <!--表单内容-->
+  <view class="form">
+    <view class="view-item">
+      <view class="view-item-box">
+        <view class="view-txt">物品名称</view>
+        <view class="view-input">
+          <input
+            class="input-item"
+            type="text"
+            placeholder='请输入物品名称,10个字以内'
+            />
+        </view>
+      </view>
+    </view>
+    <view class="view-item view-item-top">
+      <view class="view-item-box">
+        <view class="view-txt">丢失时间</view>
+        <view class="view-input">
+          <!-- <input
+            class="input-item"
+            type="text"
+            placeholder='请选择丢失的时间'
+            bindtap="showDatePicker"
+            /> -->
+          <picker 
+            mode="multiSelector" 
+            bindchange="bindMultiPickerChange" 
+            bindcolumnchange="bindMultiPickerColumnChange" 
+            value="{{multiIndex}}" 
+            range="{{multiArray}}">
+            <input
+              class="input-item"
+              value='{{time}}' 
+              placeholder='选择丢失的时间'/>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="view-item view-item-top">
+      <view class="view-item-box">
+        <view class="view-txt">事发地点</view>
+        <view class="view-input">
+          <input
+            class="input-item"
+            type="text"
+            placeholder='请输入物品丢失的地点'
+            />
+        </view>
+      </view>
+    </view>
+    <view class="view-item view-item-top">
+      <view class="view-item-box">
+        <view class="view-txt">联系电话</view>
+        <view class="view-input">
+          <input
+            class="input-item"
+            type="text"
+            placeholder='请留下你的电话号码/短号'
+            />
+        </view>
+      </view>
+    </view>
+    <view class="view-item view-item-last">
+      <view class="view-item-box">
+        <view class="view-txt">事件描述</view>
+        <view class="view-input">
+           <textarea
+              class="input-item textarea"
+              bindblur="bindTextAreaBlur" 
+              auto-height 
+              placeholder="请描述发生经过,100字以内" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--上传图片组件-->
+  <upLoadImg/>
+</view>

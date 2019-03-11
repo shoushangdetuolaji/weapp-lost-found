@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/publish/index",
+    "pages/user/index",
+    "pages/findItem/index",
+    "pages/findOwner/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "韶院失物招领",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#000000",
+    "selectedColor":"#8ad2af",
+    "borderStyle":"black",
+    "position":"bottom",
+    "list":[
+      {
+        "pagePath":"pages/findItem/index",
+        "text":"寻物",
+        "iconPath":"images/xunwu.png",
+        "selectedIconPath":"images/xunwu_on.png"
+      },
+      {
+        "pagePath": "pages/findOwner/index",
+        "text": "寻主",
+        "iconPath": "images/xunwu.png",
+        "selectedIconPath": "images/xunwu_on.png"
+      },
+      {
+        "pagePath": "pages/publish/index",
+        "text": "发布",
+        "iconPath": "images/xunwu.png",
+        "selectedIconPath": "images/xunwu_on.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我",
+        "iconPath": "images/xunwu.png",
+        "selectedIconPath": "images/xunwu_on.png"
+      }
+    ]
+  }
+}

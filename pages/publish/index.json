@@ -1,0 +1,7 @@
+{
+  "usingComponents":{
+    "van-field":"../../miniprogram_npm/_vant-weapp@0.5.7@vant-weapp/field/index",
+    "upLoadImg":"_components/upLoadImg/index"
+
+  }
+}

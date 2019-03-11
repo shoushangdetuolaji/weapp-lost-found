@@ -1,0 +1,55 @@
+<!--pages/publish/_components/upLoadImg/index.wxml-->
+<view class="bg">
+  <view class="picture_list">
+    <view
+      vx:for="{{upload_picture_list}}"
+      class="picture_item"
+      wx:key="{{index}}">
+      <image
+        wx:if="{{item.upload_percent<100}}"
+        src="{{item.path}}"
+        mode="aspectFill">
+      </image>
+      <image 
+        wx:if="{{item.upload_percent == 100}}" 
+        src="{{item.path_server}}" 
+        mode="aspectFill">
+      </image>
+      <view 
+        class="upload_progress" 
+        wx:if="{{item.upload_percent < 100}}" 
+        data-index="{{index}}" 
+        bindtap="previewImg">
+        {{item.upload_percent}}%
+      </view>
+      <text 
+        class='del' 
+        bindtap='deleteImg'
+        data-src='{{image}}' 
+        style='display:{{isDel}}' 
+        data-index="{{index}}">
+        ×
+      </text>
+    </view>
+    
+    <view 
+      class="picture_item a"
+      wx:if="{{upload_picture_list.length<count}}">
+      <view 
+        class="add-image"
+        bindtao="chooseImage">
+        <text>+</text>
+      </view>
+    </view>
+    <view 
+      class="y-up"
+      wx:if="{{auto_upload==false}}">
+      <button
+        bindtap="uploadimage"
+        class="yes-upload"
+        wx:if="{{upload_picture_list.length==count}}">
+        上传图片
+      </button>
+    </view>
+  </view>
+</view>

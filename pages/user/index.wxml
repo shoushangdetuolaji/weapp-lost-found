@@ -1,0 +1,32 @@
+<!--pages/user/index.wxml-->
+<view class="container">
+  <view class="user-avator">
+    <open-data 
+      class="avator"
+      type="userAvatarUrl"
+      mode="aspectFit">
+    </open-data>
+    <view class="icon"></view>
+    <view class="icon2"></view>
+  </view>
+</view>
+<!--我丢失的-->
+<view class="user-lost">
+  <view class="box">
+    <view class="txt">
+      我丢失的
+    </view>
+    <view class="num">
+      4 icon
+    </view>
+  </view>
+</view>
+<!--我捡到的-->
+<view class="user-find">
+  <view class="box">
+    <view class="txt">我捡到的</view>
+    <view class="num">
+      6 icon
+    </view>
+  </view>
+</view>
